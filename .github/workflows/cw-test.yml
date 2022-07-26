@@ -7,9 +7,13 @@ jobs:
     uses: ./.github/workflows/rw-info.yml
     with: 
       username: johny
+  install-dependencies:
+    users:./.github/workflow/rw-npm-ci.yml    
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by the ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+ 
