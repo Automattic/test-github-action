@@ -3,15 +3,16 @@ on: push
 
 
 jobs:
+  call-rw-info:
+    uses: ./.github/workflows/rw-info.yml
+    with: 
+      username: johny
+  install-dependencies:
+    uses: ./.github/workflows/rw-npm-ci.yml    
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ./.github/workflows/rw-info.yml
-        with: 
-          username: johny
-      - uses: ./.github/workflows/rw-npm-ci.yml    
       - run: echo "🎉 The job was automatically triggered by the ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🍏 This job's status is ${{ job.status }}."
