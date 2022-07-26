@@ -1,0 +1,15 @@
+name: My Action
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+
+jobs:
+  print input:
+    name: Print inputs
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "username = ${{ inputs.username }}"
