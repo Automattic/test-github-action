@@ -8,8 +8,7 @@ on:
         type: string
 
 jobs:
-  print input:
-    name: Print inputs
+  print-input:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
