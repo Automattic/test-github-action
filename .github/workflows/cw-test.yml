@@ -8,7 +8,7 @@ jobs:
     with: 
       username: johny
   install-dependencies:
-    uses: ./.github/workflow/rw-npm-ci.yml    
+    uses: ./.github/workflows/rw-npm-ci.yml    
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
