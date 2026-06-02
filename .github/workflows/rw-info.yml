@@ -14,9 +14,9 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by the ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v6
       - run: "echo passing ${{ inputs.username }} to my-action"
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: "16"
